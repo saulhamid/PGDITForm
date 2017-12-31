@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PDGITForm
@@ -30,7 +24,6 @@ namespace PDGITForm
                 studentInfo.Roll =stuRoll.Text;
                 studentInfo.Age =Convert.ToInt32(stuAge.Text);
                 studentInfo.Gender = stuGender.SelectedItem.ToString();
-                //service.Insert(studentInfo);
                 db.students.Add(studentInfo);
                 db.SaveChanges();
                 displaydata();
@@ -44,8 +37,6 @@ namespace PDGITForm
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'studentInfoDBDataSet.StudentInfo' table. You can move, or remove it, as needed.
-           // this.studentInfoTableAdapter.Fill(this.studentInfoDBDataSet.StudentInfo);
         }
         private void displaydata() {
             dataGridView1.DataSource = db.students.ToList();
@@ -55,27 +46,7 @@ namespace PDGITForm
             int currentRow = int.Parse(e.RowIndex.ToString());
             int currentColumnIndex = int.Parse(e.ColumnIndex.ToString());
             ID = Convert.ToInt32(dataGridView1.Rows[currentRow].Cells[2].Value);
-            student studentInfo = db.students.Find(ID);
-            if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "Delete")
-            {
-                var confirmResult = MessageBox.Show("Are you sure to delete this item ??",
-                                       "Confirm Delete!!",
-                                       MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
-                {
-                    db.students.Remove(studentInfo);
-                    displaydata();
-                    clear();
-                    MessageBox.Show(studentInfo.Name+" Is Delete");
-                }
-            }
-            if (dataGridView1.Columns[e.ColumnIndex].HeaderText == "Update")
-            {
-                stuName.Text = studentInfo.Name;
-                stuAge.Text = studentInfo.Age.ToString();
-                stuRoll.Text = studentInfo.Roll;
-                stuGender.SelectedItem = studentInfo.Gender;
-            }
+          
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {

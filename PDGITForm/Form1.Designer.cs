@@ -40,12 +40,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Updatebtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Deletebtn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.stuNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuRollDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stuAgeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Updatebtn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Deletebtn = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,22 +158,6 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // stuNameDataGridViewTextBoxColumn
-            // 
-            this.stuNameDataGridViewTextBoxColumn.Name = "stuNameDataGridViewTextBoxColumn";
-            // 
-            // stuRollDataGridViewTextBoxColumn
-            // 
-            this.stuRollDataGridViewTextBoxColumn.Name = "stuRollDataGridViewTextBoxColumn";
-            // 
-            // stuAgeDataGridViewTextBoxColumn
-            // 
-            this.stuAgeDataGridViewTextBoxColumn.Name = "stuAgeDataGridViewTextBoxColumn";
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            // 
             // Updatebtn
             // 
             this.Updatebtn.Frozen = true;
@@ -192,8 +176,25 @@
             this.Deletebtn.Name = "Deletebtn";
             this.Deletebtn.Width = 50;
             // 
+            // stuNameDataGridViewTextBoxColumn
+            // 
+            this.stuNameDataGridViewTextBoxColumn.Name = "stuNameDataGridViewTextBoxColumn";
+            // 
+            // stuRollDataGridViewTextBoxColumn
+            // 
+            this.stuRollDataGridViewTextBoxColumn.Name = "stuRollDataGridViewTextBoxColumn";
+            // 
+            // stuAgeDataGridViewTextBoxColumn
+            // 
+            this.stuAgeDataGridViewTextBoxColumn.Name = "stuAgeDataGridViewTextBoxColumn";
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 352);
